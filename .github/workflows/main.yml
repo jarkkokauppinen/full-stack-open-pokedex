@@ -17,3 +17,4 @@ jobs:
           heroku_email: jarkkokauppinen77@gmail.com
           healthcheck: 'https://po-po-po-pokedex.herokuapp.com/health'
           checkstring: 'ok'
+          rollbackonhealthcheckfailed: true
