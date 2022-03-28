@@ -1,1 +1,1 @@
-web: npm run forrest run
+web: npm run start-prod
