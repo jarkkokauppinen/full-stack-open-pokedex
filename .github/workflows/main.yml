@@ -4,10 +4,14 @@ on:
   push:
     branches:
       - master
+    pull_request:
+    branches: [master]
+    types: [opened, synchronize]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' }}
     steps:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12
